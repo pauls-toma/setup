@@ -1,5 +1,4 @@
 use std::io;
-use std::cmp::Ordering;
 use rand::Rng;
 
 fn main(){
@@ -9,7 +8,6 @@ fn main(){
     let secret_number = rand::rng().random_range(1..=100);
 
     println!("{secret_number}");
-
     println!("Please input your guess.");
 
     let mut guess = String::new();
@@ -17,7 +15,5 @@ fn main(){
     io::stdin()
         .read_line(&mut guess).expect("failed to read line");
 
-    println!("You guessed {guess}.");
-
+    println!("You guessed {guess} ");
 }
-
