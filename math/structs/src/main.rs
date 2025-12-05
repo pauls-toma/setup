@@ -1,13 +1,17 @@
-fn main() {
-    let user1 = User {
-        username: String::from("pauls"),
-        age: 27,
-        active: true,
+fn main(){
+    let B = Book {
+        title: String::from("The Rust Programming Language"),
+        author: String::from("Steve K"),
+        pages: 500,
+        published: true,
     };
-    println!(" username: {} age: {} active: {}", user1.username, user1.age, user1.active);
+
+    println!("{}", B.title);
 }
-struct User {
-    username: String,
-    age: i8,
-    active: bool,
+
+struct Book{
+    title: String,
+    author: String,
+    pages: u32,
+    published: bool,
 }
