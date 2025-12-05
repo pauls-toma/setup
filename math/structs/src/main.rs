@@ -1,17 +1,18 @@
 fn main(){
-    let B = Book {
-        title: String::from("The Rust Programming Language"),
-        author: String::from("Steve K"),
-        pages: 500,
-        published: true,
-    };
-
-    println!("{}", B.title);
+    let account = new_account(String::from("Pauls Toma"), 500000000000000);
+    println!("Owner: {}\nBalance: ${}", account.owner, account.balance);
 }
 
-struct Book{
-    title: String,
-    author: String,
-    pages: u32,
-    published: bool,
+struct Account{
+    owner: String,
+    balance: u64,
+    active: bool,
+}
+
+fn new_account(owner: String, balance: u64) -> Account {
+    Account {
+        owner,
+        balance,
+        active: true,
+    }
 }
