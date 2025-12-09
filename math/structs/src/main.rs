@@ -1,18 +1,20 @@
-fn main(){
-    let account = new_account(String::from("Pauls Toma"), 500000000000000);
-    println!("Owner: {}\nBalance: ${}", account.owner, account.balance);
+struct Book{
+    title: String,
+    number_of_pages: u32,
+    chapters: u32,
 }
 
-struct Account{
-    owner: String,
-    balance: u64,
-    active: bool,
-}
-
-fn new_account(owner: String, balance: u64) -> Account {
-    Account {
-        owner,
-        balance,
-        active: true,
+impl Book {
+    fn title(&self) -> &str{
+        &self.title
     }
+}
+
+fn main(){
+    let b = Book {
+        title: String::from("Book1"),
+        number_of_pages: 5,
+        chapters: 6,
+    };
+    println!("{}", b.title());
 }

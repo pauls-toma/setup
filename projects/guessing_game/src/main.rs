@@ -1,19 +1,24 @@
+use rand::prelude::*;
 use std::io;
-use rand::Rng;
 
-fn main(){
+fn main() {
+    println!("Enter a Random Number");
     
-    println!("Guess the number!");
+    let mut rng = rand::rng();
+    let r: u32 = rng.random_range(1..=100);
 
-    let secret_number = rand::rng().random_range(1..=100);
+    let mut g = String::new();
+    io::stdin().read_line(&mut g).expect("Failed to read line");
 
-    println!("{secret_number}");
-    println!("Please input your guess.");
+    
 
-    let mut guess = String::new();
 
-    io::stdin()
-        .read_line(&mut guess).expect("failed to read line");
 
-    println!("You guessed {guess} ");
+
+
+    
 }
+
+
+
+
