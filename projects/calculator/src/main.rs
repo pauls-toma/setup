@@ -18,5 +18,5 @@ fn main(){
     };
     account.deposit(100);
     account.withdraw(10);
-    println!("{}gg", account.balance);
+    println!("{}ggg", account.balance);
 }
