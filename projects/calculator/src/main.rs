@@ -7,7 +7,6 @@ impl BankAccount{
         self.balance += amount;
     }
 }
-
 impl BankAccount{
     fn withdraw(&mut self, amount: u32){
         self.balance -= amount;
