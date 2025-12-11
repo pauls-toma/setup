@@ -12,12 +12,11 @@ impl BankAccount{
         self.balance -= amount;
     }
 }
-
 fn main(){
     let mut account = BankAccount{
         balance: 0,
     };
     account.deposit(100);
     account.withdraw(10);
-    println!("{}", account.balance);
+    println!("{}gg", account.balance);
 }
